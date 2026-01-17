@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Configuration status="WARN">
+
+	<Appenders>
+
+		<!-- Console Appender -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss} %-5level %c{1} - %msg%n" />
+		</Console>
+
+		<!-- File Appender (All Logs) -->
+		<File name="FileLogger" fileName="logs/application.log">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1} - %msg%n" />
+		</File>
+
+		<!-- Error File Appender (Only ERROR logs) -->
+		<File name="ErrorFileLogger" fileName="logs/error.log">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %c{1} - %msg%n" />
+			<Filters>
+				<ThresholdFilter level="error" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</Filters>
+		</File>
+
+	</Appenders>
+
+	<Loggers>
+
+		<!-- Root Logger -->
+		<Root level="info">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="FileLogger" />
+			<AppenderRef ref="ErrorFileLogger" />
+		</Root>
+
+	</Loggers>
+
+</Configuration>
