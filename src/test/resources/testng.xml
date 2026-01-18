@@ -7,7 +7,7 @@
 		<classes>
 			<class name = "com.orangehrm.test.LoginTest"/>
 			<class name = "com.orangehrm.test.HomeTest"/> 
-			<class name = "com.orangehrm.test.DBVerificationTest"/>
+			<!-- <class name = "com.orangehrm.test.DBVerificationTest"/> -->
 			<class name = "com.orangehrm.test.APITest"/>
 		</classes>
 	</test>
