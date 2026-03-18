@@ -1,14 +1,13 @@
-<?xml version = "1.0" encoding = "UTF-8" ?>
-<suite name = "OrangeHRMSuite" parallel = "classes" thread-count = "10">
-<listeners>
-<listener class-name = "com.orangehrm.listeners.TestListener"></listener>
-</listeners>
-	<test name = "OrangeHRMTest">
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="LiskartAutomationSuite">
+
+	<test name="LiskartAutomationTest">
 		<classes>
-			<class name = "com.orangehrm.test.LoginTest"/>
-			<class name = "com.orangehrm.test.HomeTest"/> 
-			<!-- <class name = "com.orangehrm.test.DBVerificationTest"/> -->
-			<class name = "com.orangehrm.test.APITest"/>
+			<class name="com.liskart.test.LisKartCustomerRegistrationTest" />
+			<class name="com.liskart.test.LisKartLoginLogoutTest" />
+			<class name="com.liskart.test.CartTest" />
+			<class name="com.liskart.test.LisKartE2EOrderTest" />
+			<class name="com.liskart.test.LisKartProductServiceabilityTest" />
 		</classes>
 	</test>
 </suite>
