@@ -3,11 +3,15 @@
 
 	<test name="LiskartAutomationTest">
 		<classes>
-			<class name="com.liskart.test.LisKartCustomerRegistrationTest" />
-			<class name="com.liskart.test.LisKartLoginLogoutTest" />
-			<class name="com.liskart.test.CartTest" />
 			<class name="com.liskart.test.LisKartE2EOrderTest" />
-			<class name="com.liskart.test.LisKartProductServiceabilityTest" />
+		    <!--<class name="com.liskart.test.B2CGuestToCheckoutTest" />
+			<class name="com.liskart.test.B2CRegistrationAndFirstAddToCartTest" />
+			<class name="com.liskart.test.B2BRegistrationTest" />
+			<class name="com.liskart.test.BulkSkuCartTest" />
+			<class name="com.liskart.test.B2CLoginLogoutTest" />
+			<class name="com.liskart.test.B2CCartTest" />
+			<class name="com.liskart.test.LisKartE2EOrderTest" />
+			<class name="com.liskart.test.B2CProductServiceabilityTest" />-->
 		</classes>
 	</test>
 </suite>

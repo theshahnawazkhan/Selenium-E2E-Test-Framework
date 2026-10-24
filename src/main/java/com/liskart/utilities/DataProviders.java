@@ -1,9 +1,11 @@
 package com.liskart.utilities;
 
 import java.lang.reflect.Method;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import com.liskart.utilities.SkuJsonUtil;
 
 import org.testng.annotations.DataProvider;
 
@@ -68,8 +70,11 @@ public class DataProviders {
 
 		List<Object[]> filteredData = new ArrayList<>();
 
+
 		for (Map<String, String> row : sheetData) {
 			if (testCaseName.equalsIgnoreCase(row.get("TestCaseName"))) {
+				// Inject a SKU from JSON (random or sequential)
+				row.put("sku", SkuJsonUtil.getRandomSku()); // or use getNextSku() for sequential
 				filteredData.add(new Object[] { row });
 			}
 		}

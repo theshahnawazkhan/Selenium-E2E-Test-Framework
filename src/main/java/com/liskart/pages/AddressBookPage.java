@@ -45,6 +45,7 @@ public class AddressBookPage {
 	}
 
 	public void enterAddressFirstName(String addressFirstName) {
+		this.actionDriver.waitForElementToBeVisible(firstNameInputBoxLocator);
 		this.actionDriver.enterText(firstNameInputBoxLocator, addressFirstName);
 	}
 

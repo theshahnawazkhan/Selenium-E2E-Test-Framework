@@ -1,5 +1,7 @@
 package com.liskart.pages;
 
+import java.util.Random;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -47,6 +49,11 @@ public class LiskartCustomerLoginPage {
 	}
 
 	public void enterOtp(String otp) {
+		this.actionDriver.waitForElementToBeVisible(OtpTextLocator);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException ignored) {
+		}
 		this.actionDriver.enterText(OtpTextLocator, otp);
 	}
 

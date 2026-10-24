@@ -28,7 +28,12 @@ public class ExtentManager {
 	public synchronized static ExtentReports getReporter() {
 		if (extent == null) {
 
-			String reportPath = System.getProperty("user.dir") + "/src/test/resources/ExtentReport/ExtentReport.html";
+			String reportDir = System.getProperty("user.dir") + "/src/test/resources/ExtentReport";
+			File dir = new File(reportDir);
+			if (!dir.exists()) {
+				dir.mkdirs();
+			}
+			String reportPath = reportDir + "/ExtentReport.html";
 
 			ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 
